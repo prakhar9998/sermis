@@ -22,7 +22,7 @@ class Topic(models.Model):
         related_name='topics'
     )
     created_at = models.DateTimeField(auto_now_add=True)
-    last_post_at = models.DateTimeField(null=True)
+    last_post_at = models.DateTimeField(null=True, blank=True)
     last_post_by = models.ForeignKey(User, on_delete=models.CASCADE)
 
 

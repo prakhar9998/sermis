@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from .models import Forum, Topic, Post
 
-# Create your views here.
+def forum_list(request):
+    forums = Forum.objects.all()
+    context = {
+        'forums': forums,
+    }
+    return render(request, 'forum/list.html', context=context)

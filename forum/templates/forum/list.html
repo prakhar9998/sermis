@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Forums{% endblock %}
+
+{% block content %}
+  <div>
+    <ul>
+      {% for forum in forums %}
+        <li>{{ forum }}</li>
+      {% endfor %}
+    </ul>
+    
+  </div>
+{% endblock %}
